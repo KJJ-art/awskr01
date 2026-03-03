@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Putto AI | 혁신의 시작</title>
+    <title>AWS 웹 서비스 실습 완료</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary-color: #00a1c9; /* 부드러운 블루 */
-            --secondary-color: #0084a3; /* 조금 더 진한 블루 */
+            --primary-color: #ff9900; /* AWS 오렌지 */
+            --secondary-color: #232f3e; /* AWS 다크 블루 */
             --background-color: #f4f7f6; /* 밝은 회색 배경 */
             --text-color: #333; /* 기본 텍스트 색 */
             --white: #fff; /* 흰색 */
@@ -22,138 +22,46 @@
             background-color: var(--background-color);
             color: var(--text-color);
             line-height: 1.6;
-        }
-
-        /* 반응형 컨테이너 */
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* 헤더 스타일 */
-        header {
-            background-color: var(--white);
-            padding: 20px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        /* 히어로 섹션 (메인 화면) */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: var(--white);
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            margin-top: 80px; /* 헤더 높이만큼 띄움 */
+            height: 100vh; /* 화면 꽉 차게 */
         }
 
-        .hero-content h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 20px;
+        /* 메인 컨테이너 */
+        .container {
+            text-align: center;
+            background-color: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease-out; /* 페이드인 애니메이션 */
+        }
+
+        /* AWS 로고 이미지 스타일 */
+        .logo {
+            width: 150px; /* 이미지 크기 조절 */
+            margin-bottom: 30px;
             animation: fadeInDown 1s ease-out; /* 페이드인 애니메이션 */
         }
 
-        .hero-content p {
-            font-size: 1.5rem;
-            font-weight: 300;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease-out 0.5s; /* 0.5초 후 애니메이션 시작 */
-        }
-
-        .btn-primary {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: var(--white);
-            color: var(--primary-color);
-            text-decoration: none;
-            border-radius: 5px;
+        h1 {
+            font-size: 3rem;
             font-weight: 700;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            color: var(--secondary-color);
+            margin-bottom: 20px;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-3px); /* 마우스 올렸을 때 살짝 위로 이동 */
-            box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+        p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--text-color);
+            margin-bottom: 40px;
         }
 
-        /* 애니메이션 정의 */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* 반응형 미디어 쿼리 (모바일 대응) */
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-            .hero-content p {
-                font-size: 1.2rem;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="container">
-            <a href="#" class="logo">Putto AI</a>
-            <div class="status-badge" style="background-color: var(--primary-color); color: var(--white); padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">
-                서버 작동 중 (Running)
-            </div>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>혁신의 시작, <span style="font-weight: 300;">Putto AI</span></h1>
-                <p>AWS EC2 + VPC + Route 53 기반의 그럴싸한 홈페이지 실습 성공!</p>
-                <a href="#about" class="btn-primary">서비스 더 알아보기</a>
-            </div>
-        </div>
-    </section>
-
-</body>
-</html>
+        .status-badge {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius:
